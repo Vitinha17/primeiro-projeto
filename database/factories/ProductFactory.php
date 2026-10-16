@@ -1,7 +1,16 @@
-public function definition(): array
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class ProductFactory extends Factory
 {
-    return [
-        'name' => fake()->name(),
-        'detail' => fake()->text(200),
-    ];
+    public function definition(): array
+    {
+        return [
+            'name' => fake()->name(),
+            'detail' => fake()->text(200),
+        ];
+    }
 }
