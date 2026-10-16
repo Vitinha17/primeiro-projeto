@@ -24,6 +24,9 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required',
             'detail' => 'required',
+        ], [
+            'name.required' => 'O campo Nome é obrigatório.',
+            'detail.required' => 'O campo Detalhes é obrigatório.',
         ]);
 
         Product::create($request->all());
@@ -47,6 +50,9 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required',
             'detail' => 'required',
+        ], [
+            'name.required' => 'O campo Nome é obrigatório.',
+            'detail.required' => 'O campo Detalhes é obrigatório.',
         ]);
 
         $product->update($request->all());
